@@ -5,13 +5,14 @@
 <div class = "col-md-6 offset-md-3">
     {% if user.is_authenticated %}
     <h1> Hello! </h1>
+     
     {% else %}
 <h1>Login</h1>
 
 <form method = "POST" action = "{% url 'home' %}">
 
     {% csrf_token %}
-    <form>
+    
         <div class="form-group">
           <input type="text" class="form-control" name = "username" aria-describedby="emailHelp" placeholder="Enter Username" required>
         </div>
@@ -20,7 +21,7 @@
         </div>
         
         <button type="submit" class="btn btn-success">Login</button>
-      </form>
+      
 
 </form>
 
